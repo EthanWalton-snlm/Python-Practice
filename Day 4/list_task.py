@@ -11,6 +11,7 @@ avengers = [
 letters = []
 
 for i in avengers:
-    letters.append(len(i))
+    word = i.replace(" ", "")
+    letters.append(len(word))
 
 print(letters)
