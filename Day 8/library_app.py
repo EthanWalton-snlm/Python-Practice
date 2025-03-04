@@ -65,16 +65,24 @@ def add_book():
     title = input("Please tell me the title: ")
     author = input("Please tell me the author: ")
     year = int(input("Please tell me the year: "))
-    available = bool(input("Please tell me if it is available? (True/False): "))
-
-    library_list.append(
-        {
-            "title": title,
-            "author": author,
-            "year": year,
-            "available": available,
-        }
+    available = (
+        True
+        if input("Please tell me if it is available? (True/False): ") == "True"
+        else "False"
     )
+
+    if len(title) >= 1 and len(author) >= 1 and year >= 1 and available is not None:
+        library_list.append(
+            {
+                "title": title,
+                "author": author,
+                "year": year,
+                "available": available,
+            }
+        )
+    else:
+        print("Please enter valid information. Try again.")
+        add_book()
 
 
 def print_books():
