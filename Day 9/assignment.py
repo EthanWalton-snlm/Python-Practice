@@ -7,22 +7,18 @@ items = [
 ]
 
 
-def print_invoice(invoice_date, items):
-    result = f"Invoice Date: {invoice_date:%d %B %Y}\n"
-    result += f"{'Product':<25}{'Qty':<5}{'Unit Price':>15}{'Total':>15}\n"
+def print_invoice(invoice_date=f"{datetime.now():%d %B %Y}", items=[{}]):
+    result = f"\nInvoice Date: {invoice_date}\n{'Product':<25}{'Qty':<5}{'Unit Price':>15}{'Total':>15}\n{'-' * 60}\n"
 
-    result += "-" * 60 + "\n"
     total = 0
 
     for item in items:
         result += f"{item['name']:<25}{item['quantity']:<5}{item['price']:>15}{item['quantity'] * item['price']:>15}\n"
         total += item["quantity"] * item["price"]
-        # result += f"{item['name']}\t{item['quantity']:>}\t{item['price']}\t{item['quantity'] * item['price']:>7}\n"
 
-    result += "-" * 60 + "\n"
-
-    result += f"{'Grand Total':<30}{total:>30}"
+    result += f"{'-' * 60}\n{'Grand Total':<30}{total:>30}\n"
     return result
 
 
-print(print_invoice(datetime.now(), items))
+if __name__ == "__main__":
+    print(print_invoice("3 March 2025", items))
