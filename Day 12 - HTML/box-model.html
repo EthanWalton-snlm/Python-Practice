@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .hobby-header {
-        border: 1px solid hsl(221, 99%, 48%);
-        text-align: center;
-        background-color: #efefef;
+      .hobby-list {
+        border: 3px solid hsl(340, 57%, 64%);
+        background-color: peachpuff;
+        border-style: dashed;
+        border-top-style: solid;
+        border-top-color: crimson;
+        padding: 12px;
+        margin-bottom: 24px;
       }
 
-      .hobby-list {
-        border: 1px solid hsl(221, 99%, 48%);
-        background-color: #efefef;
-      }
+      /*
+       Box Model - all elements follow
+       1. content
+       2. padding - gap between border & content
+       3. border
+       4. margin - pushes other element
+
+       padding vs margin
+       padding - pushes inwards
+       margin - pushes outwards
+
+      */
     </style>
   </head>
   <body>
-    <!-- Unordered list -->
-    <h3 class="hobby-header">Hobbies</h3>
     <ul class="hobby-list">
+      <!-- li - List item -->
       <li>Music</li>
       <li>3D Printing</li>
       <li>Soccer</li>
@@ -28,5 +39,9 @@
       <li>Sudoku</li>
       <li>Cosplaying</li>
     </ul>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, culpa.
+    </p>
   </body>
 </html>
