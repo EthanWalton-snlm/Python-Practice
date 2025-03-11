@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        /* Centering */
+        /* display: grid;
+        place-content: center;
+        min-height: 100vh;
+        margin: 0px; */
+
+        font-family: Roboto, sans-serif;
+
+        /* Css Variables */
+        --light-red: hsla(359, 100%, 73%, 1);
+        --light-coral: hsla(359, 62%, 74%, 1);
+        --honeydew: hsla(95, 100%, 95%, 1);
+        --viridian: hsla(158, 31%, 44%, 1);
+        --space-cadet: hsla(238, 43%, 18%, 1);
+      }
+
+      .hobby-container {
+        font-size: 32px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .fa-music {
+        color: var(--light-red);
+      }
+
+      .fa-print {
+        color: var(--light-coral);
+      }
+
+      .fa-football {
+        color: rgb(78, 172, 10);
+      }
+      .fa-chess {
+        color: hsla(158, 31%, 44%, 1);
+      }
+      .fa-mask {
+        color: hsla(238, 43%, 18%, 1);
+      }
+
+      .fa-gamepad {
+        color: var(--light-red);
+      }
+
+      /* Task - Each icon in different color, text in black */
+      .hobby-list {
+        list-style: none;
+        padding: 0px;
+
+        display: flex;
+        gap: 24px;
+      }
+
+      .panel-container {
+        display: flex;
+        gap: 2%;
+        justify-content: center;
+      }
+
+      .panel-1 {
+        background-color: rgba(118, 194, 183, 1);
+      }
+
+      .panel-2 {
+        background-color: rgb(157 183 180);
+      }
+
+      .panel-3 {
+        background-color: rgb(84 147 189);
+      }
+
+      .panel-4 {
+        background-color: rgb(130 84 116);
+      }
+
+      .panel:hover {
+        transform: scale(1.05);
+        transition: 0.2s all;
+      }
+
+      .panel {
+        width: 17%;
+        border-radius: 5px;
+        line-height: 22px;
+        padding: 0% 2%;
+        padding-top: 2%;
+      }
+
+      ul {
+        padding-left: 7%;
+      }
+
+      h2 {
+        margin-bottom: 25%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="hobby-container">
+      <h3 class="hobby-heading">Hobbies</h3>
+      <ul class="hobby-list">
+        <li><i class="fa-solid fa-music"></i> Music</li>
+        <li><i class="fa-solid fa-print"></i> 3D Printing</li>
+        <li><i class="fa-solid fa-football"></i> Soccer</li>
+        <li><i class="fa-solid fa-chess"></i> Chess</li>
+      </ul>
+    </div>
+
+    <div class="panel-container">
+      <div class="panel-1 panel">
+        <img src="https://www.sanlam.com/images/why-1.png" />
+        <h2>Diverse Products</h2>
+        <ul>
+          <li>Insurance</li>
+          <li>Savings and Investments</li>
+          <li>Corporate</li>
+          <li>Asset and Wealth Management</li>
+          <li>Retail Credit</li>
+          <li>Financial Planning and Advice</li>
+          <li>Healthcare</li>
+          <li>Wills and Estates</li>
+          <h1 style="color: rgb(118 194 182)">d</h1>
+        </ul>
+      </div>
+      <div class="panel-2 panel">
+        <img src="https://www.sanlam.com/images/why-2.png" alt="" />
+        <h2>Partnerships</h2>
+        <ul>
+          <li>Banks</li>
+          <li>Telcos</li>
+          <li>Financial Services</li>
+          <li>Retailers</li>
+          <li>Strategic co-investors in Africa</li>
+        </ul>
+      </div>
+      <div class="panel-3 panel">
+        <img src="https://www.sanlam.com/images/why-3.png" alt="" />
+        <h2>Technology</h2>
+        <ul>
+          <li>Modernising core business</li>
+          <li>Future-fit client ecosystems</li>
+          <li>Disruptive product innovation and digitalisation</li>
+          <li>Digital native businesses</li>
+        </ul>
+      </div>
+      <div class="panel-4 panel">
+        <img src="https://www.sanlam.com/images/why-4.png" alt="" />
+        <h2>Sustainability</h2>
+        <ul>
+          <li>Shared value creation</li>
+          <li>Financial inclusion</li>
+          <li>ESG integration in asset management</li>
+          <li>Strategic partnerships</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
