@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1,
+      .box2,
+      .box3 {
+        /* display: block;
+        width: 300px; */
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .box1 {
+        background: plum;
+      }
+
+      .box2 {
+        background: purple;
+      }
+
+      .box3 {
+        background: pink;
+      }
+
+      a {
+        /* Inline element donot respect height or width */
+        background: orange;
+        width: 300px;
+        height: 100px;
+        /* display: block; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="">ajskdfj</a> -->
+
+    <div class="container">
+      <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem.
+      </div>
+      <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+    </div>
+  </body>
+</html>
