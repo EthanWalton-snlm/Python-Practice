@@ -38,7 +38,8 @@
       }
 
       .overall-container {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         background-color: hsl(244, 38%, 16%);
         color: white;
         width: 1000px;
@@ -93,14 +94,13 @@
       }
 
       .stats-container {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 8%;
       }
 
       .stats-container-inner {
-        display: flex;
-        flex-direction: column;
+        display: grid;
         padding: 0% 5%;
         margin-left: -5%
       }
