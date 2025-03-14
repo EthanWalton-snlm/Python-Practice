@@ -39,7 +39,6 @@
         flex-direction: row;
         height: 120px;
         align-items: center;
-        justify-content: center;
         margin-top: 50px;
       }
 
@@ -116,7 +115,6 @@
         font-weight: 800;
         font-size: 60px;
         color: hsl(240, 100%, 5%);
-        width: 34%;
         line-height: 60px;
       }
 
@@ -125,10 +123,6 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 20px;
-      }
-
-      .read-more {
-        width: 30%;
       }
 
       .read-more-button {
@@ -140,36 +134,38 @@
         font-family: "Inter", sans-serif;
         border: 0px;
         width: 54%;
-        height: 21%;
+        height: 50px;
         margin-top: 17px;
       }
 
       .read-more-para {
         line-height: 25px;
       }
+
+      .main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     </style>
   </head>
   <body>
-    <div class="main-container">
-      <div class="heading">
-        <img src="assets/images/logo.svg" alt="" />
-        <ul class="heading-ul">
-          <li class="heading-li">Home</li>
-          <li class="heading-li">New</li>
-          <li class="heading-li">Popular</li>
-          <li class="heading-li">Trending</li>
-          <li class="heading-li">Categories</li>
-        </ul>
-      </div>
+    <div class="heading">
+      <img src="assets/images/logo.svg" alt="" />
+      <ul class="heading-ul">
+        <li class="heading-li">Home</li>
+        <li class="heading-li">New</li>
+        <li class="heading-li">Popular</li>
+        <li class="heading-li">Trending</li>
+        <li class="heading-li">Categories</li>
+      </ul>
+    </div>
 
-      <img
-        src="assets/images/image-web-3-desktop.jpg"
-        alt=""
-        class="main-img"
-      />
+    <img src="assets/images/image-web-3-desktop.jpg" alt="" class="main-img" />
 
-      <div class="middle-container">
-        <h1>The Bright Future of Web 3.0?</h1>
+    <div class="main-grid">
+      <div><h1>The Bright Future of Web 3.0?</h1></div>
+      <div></div>
+      <div>
         <div class="read-more">
           <p class="read-more-para">
             We dive into the next evolution of the web that claims to put the
@@ -180,8 +176,10 @@
           <button class="read-more-button">READ MORE</button>
         </div>
       </div>
+    </div>
 
-      <div class="cards">
+    <div class="main-grid">
+      <div class="col-1">
         <div class="card">
           <img
             src="assets/images/image-retro-pcs.jpg"
@@ -201,7 +199,9 @@
             </li>
           </ul>
         </div>
+      </div>
 
+      <div class="col-2">
         <div class="card">
           <img
             src="assets/images/image-top-laptops.jpg"
@@ -221,7 +221,9 @@
             </li>
           </ul>
         </div>
+      </div>
 
+      <div class="col-3">
         <div class="card">
           <img
             src="assets/images/image-gaming-growth.jpg"
