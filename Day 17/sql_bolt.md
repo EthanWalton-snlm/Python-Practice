@@ -129,3 +129,205 @@
    ![alt text](image-4.png)
 
 ## Exercise 6
+
+1. Find the domestic and international sales for each movie
+   ```sql
+       SELECT Title, Domestic_sales, International_sales FROM movies INNER JOIN boxoffice ON id = movie_id;
+   ```
+2. Show the sales numbers for each movie that did better internationally rather than domestically
+   ```sql
+   SELECT Title, Domestic_sales, International_sales FROM movies INNER JOIN boxoffice ON id = movie_id WHERE International_sales > Domestic_sales;
+   ```
+3. List all the movies by their ratings in descending order
+   ```sql
+   SELECT Title, Rating FROM movies INNER JOIN boxoffice ON id = movie_id ORDER BY Rating DESC;
+   ```
+   ![alt text](image-5.png)
+
+## Exercise 7
+
+1. Find the list of all buildings that have employees
+   ```sql
+    SELECT DISTINCT Building
+    FROM employees;
+   ```
+2. Find the list of all buildings and their capacity
+   ```sql
+    SELECT Building_name, Capacity
+    FROM Buildings;
+   ```
+3. List all buildings and the distinct employee roles in each building (including empty buildings)
+
+   ```sql
+    SELECT DISTINCT Buildings.Building_name, Employees.Role
+    FROM Buildings
+    LEFT JOIN Employees
+    ON Buildings.Building_name = Employees.Building;
+   ```
+
+   ![alt text](image-7.png)
+
+## Exercise 8
+
+1. Find the name and role of all employees who have not been assigned to a building
+
+   ```sql
+   SELECT Name, Role
+   FROM employees
+   WHERE Building IS NULL;
+   ```
+
+2. Find the names of the buildings that hold no employees
+   ```sql
+   SELECT DISTINCT Buildings.Building_name
+   FROM Buildings
+   LEFT JOIN Employees
+   ON Buildings.Building_name = Employees.Building WHERE Employees.Role IS NULL;
+   ```
+   ![alt text](image-6.png)
+
+## Exercise 9
+
+1. List all movies and their combined sales in millions of dollars
+   ```sql
+   SELECT Movies.Title,
+   ((Boxoffice.Domestic_sales + Boxoffice.International_sales)/1000000)
+   AS Combined_Sales
+   FROM Boxoffice
+   INNER JOIN Movies
+   ON Movies.Id = Boxoffice.Movie_id;
+   ```
+2. List all movies and their ratings in percent
+   ```sql
+   SELECT Movies.Title,
+   (Boxoffice.Rating * 10)
+   AS Ratings_Percentage
+   FROM Boxoffice
+   INNER JOIN Movies
+   ON Movies.Id = Boxoffice.Movie_id;
+   ```
+3. List all movies that were released on even number years
+
+   ```sql
+   SELECT Title, Year
+   FROM Movies
+   WHERE (YEAR % 2 = 0);
+   ```
+
+   ![alt text](image-8.png)
+
+## Exercise 10
+
+1. Find the longest time that an employee has been at the studio
+   ```sql
+   SELECT MAX(Years_employed)
+    AS 'Longest Time Employeed'
+    FROM Employees;
+   ```
+2. For each role, find the average number of years employed by employees in that role
+
+   ```sql
+    SELECT Role,
+    AVG(Years_employed) AS 'Average Years Employeed'
+    FROM Employees
+    GROUP BY Role;
+   ```
+
+3. Find the total number of employee years worked in each building
+
+   ```sql
+    SELECT Building,
+    SUM(Years_employed) AS 'Average Years Employeed'
+    FROM Employees
+    GROUP BY Building;
+   ```
+
+   ![alt text](image-9.png)
+
+## Exercise 11
+
+1. Find the number of Artists in the studio (without a HAVING clause)
+   ```sql
+   SELECT count(Name) AS 'No. Artists' FROM employees WHERE Role = 'Artist';
+   ```
+2. Find the number of Employees of each role in the studio
+   ```sql
+   SELECT Role,
+   count(Name) AS 'No. Employees'
+   FROM employees GROUP BY Role;
+   ```
+3. Find the total number of years employed by all Engineers
+   ```sql
+   SELECT
+   SUM(Years_employed) AS 'Years by Engineers'
+   FROM employees
+   WHERE Role = 'Engineer';
+   ```
+   ![alt text](image-10.png)
+
+## Exercise 12
+
+1. Find the number of movies each director has directed
+   ```sql
+   SELECT
+   Director, COUNT(Title) AS 'Movies Directed'
+   FROM movies
+   GROUP BY Director;
+   ```
+2. Find the total domestic and international sales that can be attributed to each director
+   ```sql
+   SELECT Movies.Director,
+       SUM(Boxoffice.Domestic_sales + Boxoffice.International_Sales) AS 'Total Sales'
+   FROM movies
+       INNER JOIN Boxoffice
+       ON Movies.ID = Boxoffice.Movie_ID
+   GROUP BY Director;
+   ```
+   ![alt text](image-11.png)
+
+## Exercise 13
+
+1. Add the studio's new production, Toy Story 4 to the list of movies (you can use any director)
+2. ```sql
+   INSERT INTO
+   movies (Title, Director, Year, Length_minutes)
+   VALUES('Toy Story 4', 'Pete Docter', 2024, 120);
+   ```
+
+3. Toy Story 4 has been released to critical acclaim! It had a rating of 8.7, and made 340 million domestically and 270 million internationally. Add the record to the BoxOffice table.
+
+   ```sql
+    INSERT INTO
+    boxoffice (Movie_id, Rating, Domestic_sales, International_sales)
+    VALUES(15, 8.7, 340000000, 270000000);
+   ```
+
+   ![alt text](image-13.png)
+
+## Exercise 14
+
+1. The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
+
+   ```sql
+   SELECT Title, Director FROM movies WHERE ID = 2;
+
+   UPDATE movies SET Director = 'John Lasseter' WHERE ID = 2;
+   ```
+
+2. The year that Toy Story 2 was released is incorrect, it was actually released in 1999
+
+   ```sql
+   SELECT Title, Year FROM movies WHERE ID = 3;
+
+   UPDATE movies SET Year = 1999 WHERE ID = 3;
+   ```
+
+3. Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" and it was directed by Lee Unkrich
+
+   ```sql
+   SELECT Title, Director FROM movies WHERE ID = 11;
+
+   UPDATE movies SET Title = 'Toy Story 3', Director = 'Lee Unkrich' WHERE ID = 11;
+   ```
+
+   ![alt text](image-12.png)

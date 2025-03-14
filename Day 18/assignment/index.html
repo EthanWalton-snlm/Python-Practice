@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        width: 1440px;
+      }
+
+      p {
+        color: hsl(236, 13%, 42%);
+        font-size: 15px;
+      }
+
+      .card {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        height: 120px;
+        align-items: center;
+      }
+
+      .card-ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 30px;
+      }
+
+      .card-heading {
+        font-weight: 700;
+        color: hsl(5, 85%, 63%);
+        font-size: 38px;
+        margin-bottom: -20px;
+      }
+
+      .card-subheading {
+        font-weight: 800;
+        color: hsl(240, 100%, 5%);
+        font-size: 20px;
+        margin-bottom: -2px;
+      }
+
+      .card-image {
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="assets/images/image-retro-pcs.jpg" alt="" class="card-image" />
+      <ul class="card-ul">
+        <li>
+          <h3 class="card-heading">01</h3>
+        </li>
+        <li>
+          <h4 class="card-subheading">Reviving Retro PCs</h4>
+        </li>
+
+        <li>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
