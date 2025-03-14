@@ -33,17 +33,18 @@
       }
 
       .card {
-        width: 500px;
+        width: 355px;
         display: flex;
         flex-direction: row;
         height: 120px;
         align-items: center;
+        justify-content: center;
       }
 
       .card-ul {
         list-style-type: none;
         padding: 0;
-        margin-left: 30px;
+        margin-left: 25px;
       }
 
       .card-heading {
@@ -51,35 +52,88 @@
         color: hsl(5, 85%, 63%);
         font-size: 38px;
         margin-bottom: -20px;
+        margin-top: 10px;
       }
 
       .card-subheading {
         font-weight: 800;
         color: hsl(240, 100%, 5%);
-        font-size: 20px;
-        margin-bottom: -2px;
+        font-size: 18px;
+        margin-bottom: -5px;
       }
 
       .card-image {
-        height: 120px;
+        height: 130px;
+      }
+
+      .cards {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <img src="assets/images/image-retro-pcs.jpg" alt="" class="card-image" />
-      <ul class="card-ul">
-        <li>
-          <h3 class="card-heading">01</h3>
-        </li>
-        <li>
-          <h4 class="card-subheading">Reviving Retro PCs</h4>
-        </li>
+    <div class="cards">
+      <div class="card">
+        <img
+          src="assets/images/image-retro-pcs.jpg"
+          alt=""
+          class="card-image"
+        />
+        <ul class="card-ul">
+          <li>
+            <h3 class="card-heading">01</h3>
+          </li>
+          <li>
+            <h4 class="card-subheading">Reviving Retro PCs</h4>
+          </li>
 
-        <li>
-          <p>What happens when old PCs are given modern upgrades?</p>
-        </li>
-      </ul>
+          <li>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img
+          src="assets/images/image-top-laptops.jpg"
+          alt=""
+          class="card-image"
+        />
+        <ul class="card-ul">
+          <li>
+            <h3 class="card-heading">02</h3>
+          </li>
+          <li>
+            <h4 class="card-subheading">Top 10 Laptops of 2022</h4>
+          </li>
+
+          <li>
+            <p>Our best picks for various needs and budgets.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img
+          src="assets/images/image-gaming-growth.jpg"
+          alt=""
+          class="card-image"
+        />
+        <ul class="card-ul">
+          <li>
+            <h3 class="card-heading">03</h3>
+          </li>
+          <li>
+            <h4 class="card-subheading">The Growth of Gaming</h4>
+          </li>
+
+          <li>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
