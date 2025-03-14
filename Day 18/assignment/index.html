@@ -23,9 +23,14 @@
 
     <style>
       body {
-        font-family: "Inter", sans-serif;
-        width: 1440px;
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
         background-color: hsl(36, 100%, 99%);
+      }
+
+      .overall-container {
+        font-family: "Inter", sans-serif;
+        width: 1152px;
       }
 
       p {
@@ -77,9 +82,9 @@
         display: flex;
         flex-direction: row;
         padding: 0;
-        margin: 0;
         justify-content: space-between;
         width: 100%;
+        margin-top: 70px;
       }
 
       .heading-ul {
@@ -106,8 +111,9 @@
 
       .main-img {
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
         margin-top: 50px;
+        height: 300px;
       }
 
       h1 {
@@ -135,7 +141,7 @@
         border: 0px;
         width: 54%;
         height: 50px;
-        margin-top: 17px;
+        margin-top: 30px;
       }
 
       .read-more-para {
@@ -149,101 +155,111 @@
     </style>
   </head>
   <body>
-    <div class="heading">
-      <img src="assets/images/logo.svg" alt="" />
-      <ul class="heading-ul">
-        <li class="heading-li">Home</li>
-        <li class="heading-li">New</li>
-        <li class="heading-li">Popular</li>
-        <li class="heading-li">Trending</li>
-        <li class="heading-li">Categories</li>
-      </ul>
-    </div>
-
-    <img src="assets/images/image-web-3-desktop.jpg" alt="" class="main-img" />
-
-    <div class="main-grid">
-      <div><h1>The Bright Future of Web 3.0?</h1></div>
-      <div></div>
+    <div></div>
+    <div class="overall-container">
       <div>
-        <div class="read-more">
-          <p class="read-more-para">
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfulling its promise?
-          </p>
+        <div class="heading">
+          <img src="assets/images/logo.svg" alt="" src="img-logo" />
+          <ul class="heading-ul">
+            <li class="heading-li">Home</li>
+            <li class="heading-li">New</li>
+            <li class="heading-li">Popular</li>
+            <li class="heading-li">Trending</li>
+            <li class="heading-li">Categories</li>
+          </ul>
+        </div>
 
-          <button class="read-more-button">READ MORE</button>
+        <img
+          src="assets/images/image-web-3-desktop.jpg"
+          alt=""
+          class="main-img"
+        />
+
+        <div class="main-grid">
+          <div><h1>The Bright Future of Web 3.0?</h1></div>
+          <div></div>
+          <div>
+            <div class="read-more">
+              <p class="read-more-para">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfulling its promise?
+              </p>
+
+              <button class="read-more-button">READ MORE</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-grid">
+          <div class="col-1">
+            <div class="card">
+              <img
+                src="assets/images/image-retro-pcs.jpg"
+                alt=""
+                class="card-image"
+              />
+              <ul class="card-ul">
+                <li>
+                  <h3 class="card-heading">01</h3>
+                </li>
+                <li>
+                  <h4 class="card-subheading">Reviving Retro PCs</h4>
+                </li>
+
+                <li>
+                  <p>What happens when old PCs are given modern upgrades?</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <div class="card">
+              <img
+                src="assets/images/image-top-laptops.jpg"
+                alt=""
+                class="card-image"
+              />
+              <ul class="card-ul">
+                <li>
+                  <h3 class="card-heading">02</h3>
+                </li>
+                <li>
+                  <h4 class="card-subheading">Top 10 Laptops of 2022</h4>
+                </li>
+
+                <li>
+                  <p>Our best picks for various needs and budgets.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-3">
+            <div class="card">
+              <img
+                src="assets/images/image-gaming-growth.jpg"
+                alt=""
+                class="card-image"
+              />
+              <ul class="card-ul">
+                <li>
+                  <h3 class="card-heading">03</h3>
+                </li>
+                <li>
+                  <h4 class="card-subheading">The Growth of Gaming</h4>
+                </li>
+
+                <li>
+                  <p>How the pandemic has sparked fresh opportunities.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="main-grid">
-      <div class="col-1">
-        <div class="card">
-          <img
-            src="assets/images/image-retro-pcs.jpg"
-            alt=""
-            class="card-image"
-          />
-          <ul class="card-ul">
-            <li>
-              <h3 class="card-heading">01</h3>
-            </li>
-            <li>
-              <h4 class="card-subheading">Reviving Retro PCs</h4>
-            </li>
-
-            <li>
-              <p>What happens when old PCs are given modern upgrades?</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-2">
-        <div class="card">
-          <img
-            src="assets/images/image-top-laptops.jpg"
-            alt=""
-            class="card-image"
-          />
-          <ul class="card-ul">
-            <li>
-              <h3 class="card-heading">02</h3>
-            </li>
-            <li>
-              <h4 class="card-subheading">Top 10 Laptops of 2022</h4>
-            </li>
-
-            <li>
-              <p>Our best picks for various needs and budgets.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="card">
-          <img
-            src="assets/images/image-gaming-growth.jpg"
-            alt=""
-            class="card-image"
-          />
-          <ul class="card-ul">
-            <li>
-              <h3 class="card-heading">03</h3>
-            </li>
-            <li>
-              <h4 class="card-subheading">The Growth of Gaming</h4>
-            </li>
-
-            <li>
-              <p>How the pandemic has sparked fresh opportunities.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div></div>
   </body>
 </html>
