@@ -76,7 +76,10 @@
       .heading {
         display: flex;
         flex-direction: row;
+        padding: 0;
+        margin: 0;
         justify-content: space-between;
+        width: 100%;
       }
 
       .heading-ul {
@@ -96,6 +99,32 @@
         width: 80%;
         justify-content: center;
         align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      .main-img {
+        width: 100%;
+        object-fit: contain;
+        margin-top: 50px;
+      }
+
+      h1 {
+        font-weight: 800;
+        font-size: 60px;
+        color: hsl(240, 100%, 5%);
+        width: 34%;
+      }
+
+      .middle-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .read-more {
+        width: 34%;
       }
     </style>
   </head>
@@ -110,6 +139,25 @@
           <li class="heading-li">Trending</li>
           <li class="heading-li">Categories</li>
         </ul>
+      </div>
+
+      <img
+        src="assets/images/image-web-3-desktop.jpg"
+        alt=""
+        class="main-img"
+      />
+
+      <div class="middle-container">
+        <h1>The Bright Future of Web 3.0?</h1>
+        <div class="read-more">
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfulling its promise?
+          </p>
+
+          <button class="read-more-button">READ MORE</button>
+        </div>
       </div>
 
       <div class="cards">
