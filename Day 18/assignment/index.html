@@ -39,6 +39,7 @@
         height: 120px;
         align-items: center;
         justify-content: center;
+        margin-top: 50px;
       }
 
       .card-ul {
@@ -71,68 +72,106 @@
         flex-direction: row;
         gap: 30px;
       }
+
+      .heading {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .heading-ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .heading-li {
+        margin: 0px 20px;
+        color: hsl(236, 13%, 42%);
+        font-weight: 400;
+        font-size: 15px;
+      }
+
+      .main-container {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
-    <div class="cards">
-      <div class="card">
-        <img
-          src="assets/images/image-retro-pcs.jpg"
-          alt=""
-          class="card-image"
-        />
-        <ul class="card-ul">
-          <li>
-            <h3 class="card-heading">01</h3>
-          </li>
-          <li>
-            <h4 class="card-subheading">Reviving Retro PCs</h4>
-          </li>
-
-          <li>
-            <p>What happens when old PCs are given modern upgrades?</p>
-          </li>
+    <div class="main-container">
+      <div class="heading">
+        <img src="assets/images/logo.svg" alt="" />
+        <ul class="heading-ul">
+          <li class="heading-li">Home</li>
+          <li class="heading-li">New</li>
+          <li class="heading-li">Popular</li>
+          <li class="heading-li">Trending</li>
+          <li class="heading-li">Categories</li>
         </ul>
       </div>
 
-      <div class="card">
-        <img
-          src="assets/images/image-top-laptops.jpg"
-          alt=""
-          class="card-image"
-        />
-        <ul class="card-ul">
-          <li>
-            <h3 class="card-heading">02</h3>
-          </li>
-          <li>
-            <h4 class="card-subheading">Top 10 Laptops of 2022</h4>
-          </li>
+      <div class="cards">
+        <div class="card">
+          <img
+            src="assets/images/image-retro-pcs.jpg"
+            alt=""
+            class="card-image"
+          />
+          <ul class="card-ul">
+            <li>
+              <h3 class="card-heading">01</h3>
+            </li>
+            <li>
+              <h4 class="card-subheading">Reviving Retro PCs</h4>
+            </li>
 
-          <li>
-            <p>Our best picks for various needs and budgets.</p>
-          </li>
-        </ul>
-      </div>
+            <li>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </li>
+          </ul>
+        </div>
 
-      <div class="card">
-        <img
-          src="assets/images/image-gaming-growth.jpg"
-          alt=""
-          class="card-image"
-        />
-        <ul class="card-ul">
-          <li>
-            <h3 class="card-heading">03</h3>
-          </li>
-          <li>
-            <h4 class="card-subheading">The Growth of Gaming</h4>
-          </li>
+        <div class="card">
+          <img
+            src="assets/images/image-top-laptops.jpg"
+            alt=""
+            class="card-image"
+          />
+          <ul class="card-ul">
+            <li>
+              <h3 class="card-heading">02</h3>
+            </li>
+            <li>
+              <h4 class="card-subheading">Top 10 Laptops of 2022</h4>
+            </li>
 
-          <li>
-            <p>How the pandemic has sparked fresh opportunities.</p>
-          </li>
-        </ul>
+            <li>
+              <p>Our best picks for various needs and budgets.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <img
+            src="assets/images/image-gaming-growth.jpg"
+            alt=""
+            class="card-image"
+          />
+          <ul class="card-ul">
+            <li>
+              <h3 class="card-heading">03</h3>
+            </li>
+            <li>
+              <h4 class="card-subheading">The Growth of Gaming</h4>
+            </li>
+
+            <li>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
