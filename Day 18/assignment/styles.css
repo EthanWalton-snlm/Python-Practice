@@ -1,12 +1,13 @@
 body {
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  place-content: center;
   background-color: hsl(36, 100%, 99%);
 }
 
 .overall-container {
   font-family: "Inter", sans-serif;
-  width: 1152px;
+  width: 1152px; /* 80% of given body width */
+  padding: 100px;
 }
 
 p {
@@ -21,28 +22,28 @@ p {
   height: 120px;
   align-items: center;
   margin-top: 50px;
-  margin-bottom: 70px;
 }
 
 .card-ul {
   list-style-type: none;
   padding: 0;
   margin-left: 25px;
+  margin-bottom: 30px;
 }
 
 .card-heading {
   font-weight: 700;
   color: hsl(5, 85%, 63%);
-  font-size: 38px;
-  margin-bottom: -20px;
-  margin-top: 10px;
+  font-size: 35px;
+  margin-bottom: -10px;
+  margin-top: 25px;
 }
 
 .card-subheading {
   font-weight: 800;
   color: hsl(240, 100%, 5%);
   font-size: 18px;
-  margin-bottom: -5px;
+  margin-bottom: 15px;
 }
 
 .card-image {
@@ -61,7 +62,6 @@ p {
   padding: 0;
   justify-content: space-between;
   width: 100%;
-  margin-top: 70px;
 }
 
 .heading-ul {
@@ -71,19 +71,10 @@ p {
 }
 
 .heading-li {
-  margin: 0px 20px;
+  margin-left: 40px;
   color: hsl(236, 13%, 42%);
   font-weight: 400;
   font-size: 15px;
-}
-
-.main-container {
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .main-img {
@@ -94,18 +85,11 @@ p {
 }
 
 h1 {
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: 800;
   font-size: 60px;
   color: hsl(240, 100%, 5%);
   line-height: 60px;
-}
-
-.middle-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
 }
 
 .read-more-button {
@@ -116,16 +100,19 @@ h1 {
   font-weight: 800;
   font-family: "Inter", sans-serif;
   border: 0px;
-  width: 54%;
+  width: 50%;
   height: 50px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .read-more-para {
   line-height: 25px;
+  width: 90%;
 }
 
 .main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+  margin-bottom: -30px;
 }
