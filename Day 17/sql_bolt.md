@@ -309,25 +309,122 @@
 1. The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
 
    ```sql
-   SELECT Title, Director FROM movies WHERE ID = 2;
+   SELECT Title, Director
+   FROM movies
+   WHERE ID = 2;
 
-   UPDATE movies SET Director = 'John Lasseter' WHERE ID = 2;
+   UPDATE movies
+   SET Director = 'John Lasseter'
+   WHERE ID = 2;
    ```
 
 2. The year that Toy Story 2 was released is incorrect, it was actually released in 1999
 
    ```sql
-   SELECT Title, Year FROM movies WHERE ID = 3;
+   SELECT Title, Year
+   FROM movies
+   WHERE ID = 3;
 
-   UPDATE movies SET Year = 1999 WHERE ID = 3;
+   UPDATE movies
+   SET Year = 1999
+   WHERE ID = 3;
    ```
 
 3. Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" and it was directed by Lee Unkrich
 
    ```sql
-   SELECT Title, Director FROM movies WHERE ID = 11;
+   SELECT Title, Director
+   FROM movies
+   WHERE ID = 11;
 
-   UPDATE movies SET Title = 'Toy Story 3', Director = 'Lee Unkrich' WHERE ID = 11;
+   UPDATE movies
+   SET Title = 'Toy Story 3', Director = 'Lee Unkrich'
+   WHERE ID = 11;
    ```
 
    ![alt text](image-12.png)
+
+## Exercise 15
+
+1. This database is getting too big, lets remove all movies that were released before 2005.
+
+   ```sql
+   SELECT *
+   FROM movies
+   WHERE Year < 2005;
+
+   DELETE
+   FROM movies
+   WHERE Year < 2005;
+   ```
+
+2. Andrew Stanton has also left the studio, so please remove all movies directed by him.
+
+   ```sql
+   SELECT *
+   FROM movies
+   WHERE Director = 'Andrew Stanton';
+
+   DELETE
+   FROM movies
+   WHERE Director = 'Andrew Stanton';
+   ```
+
+   ![alt text](image-14.png)
+
+## Exercise 16
+
+1. Create a new table named Database with the following columns:
+
+   – Name A string (text) describing the name of the database
+
+   – Version A number (floating point) of the latest version of this database
+
+   – Download_count An integer count of the number of times this database was downloaded
+
+   This table has no constraints.
+
+   ```sql
+   CREATE TABLE Database (
+      name TEXT,
+      version FLOAT,
+      download_count INT
+   );
+   ```
+
+   ![alt text](image-15.png)
+
+## Exercise 17
+
+1. Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.
+
+   ```sql
+   ALTER TABLE movies
+   ADD Aspect_ratio FLOAT;
+   ```
+
+2. Add another column named Language with a TEXT data type to store the language that the movie was released in. Ensure that the default for this language is English.
+
+   ```sql
+   ALTER TABLE movies
+   ADD Language TEXT
+   DEFAULT 'English';
+   ```
+
+   ![alt text](image-16.png)
+
+## Exercise 18
+
+1. We've sadly reached the end of our lessons, lets clean up by removing the Movies table
+
+   ```sql
+   DROP TABLE movies;
+   ```
+
+2. And drop the BoxOffice table as well
+
+   ```sql
+   DROP TABLE BoxOffice;
+   ```
+
+   ![alt text](image-17.png)
