@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "inStock": true,
+    "price": 185.99
+  },
+  {
+    "id": 2,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "inStock": false,
+    "price": 92.99
+  },
+  {
+    "id": 3,
+    "name": "Smartwatch",
+    "category": "Wearables",
+    "inStock": true,
+    "price": 139.49
+  }
+]
