@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .form-element {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      width: 30%;
+    }
+  </style>
+  <body>
+    <form class="form-container">
+      <div class="form-element">
+        <label for="name">Name</label>
+        <input type="text" placeholder="John" id="name" required />
+      </div>
+
+      <div class="form-element">
+        <label for="name">Email</label>
+        <input type="email" placeholder="steve@apple.com" id="email" required />
+      </div>
+
+      <div class="form-element">
+        <label for="password">Password</label>
+        <input type="password" placeholder="Shhh" id="password" required />
+      </div>
+
+      <div class="form-element">
+        <label for="age">Age</label>
+        <input
+          type="number"
+          min="18"
+          max="60"
+          placeholder="20"
+          id="age"
+          required
+        />
+      </div>
+
+      <div class="form-element">
+        <p>Gender</p>
+        <label><input type="radio" name="gender" /> Male</label>
+        <label><input type="radio" name="gender" /> Female</label>
+      </div>
+
+      <div class="form-element">
+        <p>Hobbies</p>
+        <label
+          ><input type="checkbox" name="hobby" checked disabled /> Chess</label
+        >
+        <label><input type="checkbox" name="hobby" /> Karate</label>
+        <label><input type="checkbox" name="hobby" /> Badminton</label>
+        <label><input type="checkbox" name="hobby" /> Anime</label>
+      </div>
+
+      <select name="" id="">
+        <option value="CPT">Cape Town</option>
+        <option value="DBN">Durban</option>
+      </select>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>
